@@ -70,25 +70,26 @@ function Home() {
 
       <header className="navbar">
 
-  <a href="/Shake" className="logo">
-    <div className="logo-box">P</div>
+        <a href="/" className="logo">
+          <div className="logo-box">P</div>
 
-    <div className="logo-text">
-      <strong>PATRONEDİTLO</strong>
-      <span>COMMUNİTY</span>
-    </div>
-  </a>
+          <div className="logo-text">
+            <strong>PATRONEDİTLO</strong>
+            <span>COMMUNİTY</span>
+          </div>
+        </a>
 
-  <nav className="main-nav">
-  <a href="/">Ana Sayfa</a>
-  <a href="/shake">Shake</a>
-  <a href="/sfx">Kaynaklar</a>
-  <a href="/fonts">Fontlar</a>
-  <a href="/login">Giriş Yap</a>
-  <a href="/kayit" className="register-btn">Kaydol</a>
-</nav>
+        <nav className="main-nav">
+          <a href="/">Ana Sayfa</a>
+          <a href="/shake">Shake</a>
+          <a href="/sfx">Kaynaklar</a>
+          <a href="/fonts">Fontlar</a>
+          <a href="/login">Giriş Yap</a>
+          <a href="/kayit" className="register-btn">Kaydol</a>
+        </nav>
 
-</header>
+      </header>
+
       <main>
 
         <section className="hero">
@@ -136,15 +137,16 @@ function Home() {
               <p>Editlerinde kullanabileceğin özel fontlar.</p>
               <a href="/fonts">Kaynakları Gör →</a>
             </div>
-<div
-  className="resource-card"
-  onClick={() => (window.location.href = "/shake")}
-  style={{ cursor: "pointer" }}
->
+
+            <div
+              className="resource-card"
+              onClick={() => (window.location.href = "/shake")}
+              style={{ cursor: "pointer" }}
+            >
               <div className="resource-icon">◆</div>
               <h3>Edit İçin Shake ler</h3>
               <p>After Effects, Premiere Pro ve diğer programlar.</p>
-              <a href="/Shake">Shakeler Gör →</a>
+              <a href="/shake">Shakeler Gör →</a>
             </div>
 
             <div className="resource-card">
@@ -193,8 +195,6 @@ function App() {
     return <Programlar />;
   }
 
-  
-
   if (path === "/login") {
     return <Login />;
   }
@@ -203,11 +203,15 @@ function App() {
     return <Kayit />;
   }
 
-  if (path === "/shake") 
+  if (path === "/shake") {
     return <Shake />;
+  }
+
+  if (path === "/cc") {
+    return <CC />;
+  }
 
   return <Home />;
 }
 
 export default App;
-
