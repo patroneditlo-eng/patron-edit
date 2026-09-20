@@ -7,6 +7,8 @@ import CC from "./CC/CC";
 import Shake from "./Shake/Shake";
 import BackgroundRemover from "./BackgroundRemover";
 import { login, register, logout } from "./auth";
+import { useEffect, useState } from "react";
+import { supabase } from "./lib/supabaseClient";
 
 import "./index.css";
 
@@ -194,6 +196,54 @@ function Home() {
 function App() {
   const path = window.location.pathname;
 
+  const [session, setSession] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data }) => {
+      setSession(data.session);
+      setLoading(false);
+    });
+
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, session) => {
+      setSession(session);
+      setLoading(false);
+    });
+
+    return () => subscription.unsubscribe();
+  }, []);
+
+  if (loading) {
+    return <div style={{
+      minHeight: "100vh",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      background: "#050505",
+      color: "white"
+    }}>
+      Yükleniyor...
+    </div>;
+  }
+
+  // Giriş ve kayıt sayfaları herkese açık
+  if (path === "/login") {
+    return <Login />;
+  }
+
+  if (path === "/kayit") {
+    return <Kayit />;
+  }
+
+  // Giriş yapmamışsa login'e gönder
+  if (!session) {
+    window.location.replace("/login");
+    return null;
+  }
+
+  // Giriş yapmış kullanıcı
   if (path === "/sfx") {
     return <SFX />;
   }
@@ -203,8 +253,8 @@ function App() {
   }
 
   if (path === "/background-remover") {
-  return <BackgroundRemover />;
-}
+    return <BackgroundRemover />;
+  }
 
   if (path === "/fonts") {
     return <Fonts />;
@@ -212,14 +262,6 @@ function App() {
 
   if (path === "/programlar") {
     return <Programlar />;
-  }
-
-  if (path === "/login") {
-    return <Login />;
-  }
-
-  if (path === "/kayit") {
-    return <Kayit />;
   }
 
   if (path === "/shake") {

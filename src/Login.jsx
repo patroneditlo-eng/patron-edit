@@ -1,17 +1,29 @@
 import { useState } from "react";
 import "./Login.css";
+import { login } from "./auth";
 
 function Login() {
-  const [isRegister, setIsRegister] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
 
-    if (isRegister) {
-      alert("Kayıt başarılı!");
-    } else {
-      alert("Giriş başarılı!");
+    setError("");
+    setLoading(true);
+
+    const { error } = await login(email, password);
+
+    if (error) {
+      setError(error.message);
+      setLoading(false);
+      return;
     }
+
+    // Başarılı giriş
+    window.location.href = "/";
   }
 
   return (
@@ -20,59 +32,55 @@ function Login() {
 
         <div className="login-logo">P</div>
 
-        <h1>
-          {isRegister ? "Hesap Oluştur" : "Giriş Yap"}
-        </h1>
+        <h1>Giriş Yap</h1>
 
-        <p>
-          {isRegister
-            ? "Patron Edit hesabını oluştur."
-            : "Patron Edit hesabına giriş yap."}
-        </p>
+        <p>Patron Edit hesabına giriş yap.</p>
 
         <form onSubmit={handleSubmit}>
-
-          {isRegister && (
-            <input
-              type="text"
-              placeholder="Kullanıcı adı"
-              required
-            />
-          )}
 
           <input
             type="email"
             placeholder="E-posta"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             required
           />
 
           <input
             type="password"
             placeholder="Şifre"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
             required
           />
 
-          <button type="submit">
-            {isRegister ? "Kayıt Ol" : "Giriş Yap"}
+          {error && (
+            <p style={{ color: "#ff4d4d", marginTop: "10px" }}>
+              {error}
+            </p>
+          )}
+
+          <button type="submit" disabled={loading}>
+            {loading ? "Giriş yapılıyor..." : "Giriş Yap"}
           </button>
 
         </form>
 
         <div className="login-switch">
-          {isRegister
-            ? "Zaten hesabın var mı?"
-            : "Hesabın yok mu?"}
+          Hesabın yok mu?
 
           <button
             type="button"
-            onClick={() => setIsRegister(!isRegister)}
+            onClick={() => {
+              window.location.href = "/kayit";
+            }}
           >
-            {isRegister ? "Giriş Yap" : "Kayıt Ol"}
+            Kayıt Ol
           </button>
         </div>
 
         <a href="/" className="back-home">
-          ← Ana Sayfaya Dön
+          Ana Sayfaya Dön
         </a>
 
       </div>
