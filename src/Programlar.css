@@ -1,0 +1,211 @@
+.programlar-page {
+  min-height: 100vh;
+  padding: 35px;
+  box-sizing: border-box;
+  background:
+    radial-gradient(circle at 50% 45%, #263b91 0%, #10183f 42%, #05091e 100%);
+  color: #fff;
+}
+
+/* BAŞLIK */
+
+.programlar-header {
+  max-width: 1450px;
+  margin: 0 auto 30px;
+}
+
+.programlar-header h1 {
+  margin: 0;
+  font-size: 34px;
+  font-weight: 800;
+}
+
+.programlar-header p {
+  margin: 7px 0 0;
+  color: rgba(255,255,255,.55);
+}
+
+/* 5'Lİ GRID */
+
+.program-grid {
+  max-width: 1450px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+
+/* KART */
+
+.program-card {
+  min-height: 195px;
+  padding: 22px;
+  box-sizing: border-box;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(42, 55, 115, .92),
+      rgba(20, 29, 70, .9)
+    );
+
+  border: 1px solid rgba(139, 111, 255, .7);
+
+  box-shadow:
+    0 0 18px rgba(90, 45, 255, .12);
+
+  transition: .25s ease;
+}
+
+.program-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #b96cff;
+
+  box-shadow:
+    0 0 25px rgba(155, 65, 255, .35);
+}
+
+/* MOR İKON */
+
+.program-icon {
+  width: 47px;
+  height: 47px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 18px;
+
+  border-radius: 13px;
+
+  background:
+    linear-gradient(135deg, #5b19d9, #a91fff);
+
+  border: 1px solid rgba(255,255,255,.3);
+
+  box-shadow:
+    0 0 16px rgba(140, 40, 255, .55);
+
+  font-size: 16px;
+  font-weight: 800;
+}
+
+/* PROGRAM ADI */
+
+.program-card h2 {
+  margin: 0;
+
+  font-size: 18px;
+  line-height: 1.2;
+
+  color: white;
+}
+
+/* AÇIKLAMA */
+
+.program-type {
+  margin: 7px 0 0;
+
+  font-size: 13px;
+
+  color: rgba(255,255,255,.7);
+}
+
+/* ÇİZGİ */
+
+.program-line {
+  height: 1px;
+
+  margin-top: 25px;
+  margin-bottom: 13px;
+
+  background: rgba(255,255,255,.25);
+}
+
+/* ALT KISIM */
+
+.program-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* AS */
+
+.program-copy {
+  border: 0;
+  padding: 0;
+
+  background: transparent;
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+/* İNDİR */
+
+.program-download {
+  color: #ffb7f4;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+.program-download:hover {
+  color: #fff;
+
+  text-shadow:
+    0 0 10px #ff45e9;
+}
+
+/* TABLET */
+
+@media (max-width: 1200px) {
+  .program-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .program-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .programlar-page {
+    padding: 20px;
+  }
+
+  .program-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .program-card {
+    padding: 16px;
+  }
+
+  .program-card h2 {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 430px) {
+  .program-grid {
+    grid-template-columns: 1fr;
+  }
+}

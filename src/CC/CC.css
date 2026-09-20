@@ -1,0 +1,93 @@
+.cc-page {
+  min-height: 100vh;
+  padding: 80px 6%;
+  background: #070b1f;
+  color: white;
+}
+
+.cc-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.cc-header h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.cc-header p {
+  color: #9ca3c7;
+  font-size: 17px;
+}
+
+.cc-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.cc-card {
+  padding: 22px;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #111936, #0b1028);
+  border: 1px solid #252d55;
+  box-shadow: 0 0 25px rgba(80, 70, 180, 0.12);
+  transition: 0.25s;
+}
+
+.cc-card:hover {
+  transform: translateY(-6px);
+  border-color: #695cff;
+  box-shadow: 0 0 30px rgba(105, 92, 255, 0.25);
+}
+
+.cc-preview {
+  height: 150px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  background: linear-gradient(135deg, #24145f, #172d73);
+  color: white;
+  font-size: 48px;
+  font-weight: 800;
+}
+
+.cc-card h2 {
+  font-size: 20px;
+  margin: 0 0 8px;
+}
+
+.cc-card p {
+  color: #8f98bd;
+  margin-bottom: 20px;
+}
+
+.cc-card button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #635bff;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cc-card button:hover {
+  background: #756eff;
+}
+
+@media (max-width: 1000px) {
+  .cc-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cc-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,81 @@
+.sfx-page {
+  min-height: 100vh;
+  padding: 70px 8%;
+  background: #071127;
+  color: white;
+}
+
+.sfx-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.sfx-small-title {
+  color: #9b7cff;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+
+.sfx-header h1 {
+  font-size: 48px;
+  margin: 12px 0;
+}
+
+.sfx-header p {
+  color: #aeb8ce;
+}
+
+.sfx-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.sfx-card {
+  padding: 25px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.sfx-icon {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.sfx-info h2 {
+  margin: 0 0 5px;
+}
+
+.sfx-info span {
+  color: #929db5;
+}
+
+.sfx-actions {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.sfx-actions audio {
+  max-width: 100%;
+}
+
+.sfx-actions a {
+  padding: 10px 15px;
+  border-radius: 9px;
+  background: #7657e8;
+  color: white;
+  text-decoration: none;
+}
+
+@media (max-width: 700px) {
+  .sfx-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,303 @@
+.fonts-page {
+  min-height: 100vh;
+  padding: 50px 6%;
+  box-sizing: border-box;
+  background:
+    radial-gradient(circle at top left, #193d9c 0%, transparent 35%),
+    radial-gradient(circle at bottom right, #30145f 0%, transparent 35%),
+    #050814;
+  color: white;
+}
+
+.fonts-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.fonts-symbol {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.fonts-header h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.fonts-header p {
+  margin-top: 12px;
+  color: #b8c1d9;
+  font-size: 16px;
+}
+
+/* YAZI MOTORU */
+
+.font-editor {
+  max-width: 1000px;
+  margin: 0 auto 35px;
+  padding: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 22px;
+  background: rgba(12, 20, 45, 0.75);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.editor-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.editor-title span {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #315eea;
+  font-size: 20px;
+}
+
+.editor-title h2 {
+  margin: 0;
+  font-size: 21px;
+}
+
+.editor-title p {
+  margin: 5px 0 0;
+  color: #9ca8c5;
+  font-size: 13px;
+}
+
+.font-editor textarea {
+  width: 100%;
+  min-height: 130px;
+  resize: vertical;
+  box-sizing: border-box;
+
+  padding: 18px;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+
+  outline: none;
+
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+
+  font-size: 24px;
+  line-height: 1.5;
+  font-family: Arial, sans-serif;
+}
+
+.font-editor textarea:focus {
+  border-color: #587cff;
+  box-shadow: 0 0 0 3px rgba(88, 124, 255, 0.12);
+}
+
+.fonts-count {
+  max-width: 1200px;
+  margin: 0 auto 15px;
+  color: #9da8c2;
+  font-size: 14px;
+}
+
+/* FONT KARTLARI */
+
+.fonts-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.font-card {
+  min-height: 260px;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+
+  background: linear-gradient(
+    145deg,
+    rgba(28, 55, 115, 0.9),
+    rgba(10, 18, 43, 0.9)
+  );
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.font-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(110, 140, 255, 0.7);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.font-card-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.font-aa {
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.font-card-top h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.font-card-top span {
+  display: block;
+  margin-top: 3px;
+  color: #9faac5;
+  font-size: 12px;
+}
+
+.font-preview {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 130px;
+
+  text-align: center;
+
+  padding: 15px;
+
+  font-size: 34px;
+  line-height: 1.2;
+
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.font-download {
+  align-self: flex-start;
+
+  padding: 9px 15px;
+
+  border-radius: 10px;
+
+  background: #b57cff;
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  transition: 0.2s;
+}
+
+.font-download:hover {
+  background: #9b5cff;
+  transform: translateY(-2px);
+}
+
+.font-empty {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  text-align: center;
+
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.font-empty h2 {
+  margin-top: 0;
+}
+
+/* TELEFON */
+
+@media (max-width: 900px) {
+  .fonts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .fonts-page {
+    padding: 35px 15px;
+  }
+
+  .fonts-header h1 {
+    font-size: 38px;
+  }
+
+  .fonts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .font-preview {
+    font-size: 30px;
+  }
+}
+/* ===== FONT ARAMA / YAZI KUTUSU ===== */
+
+.font-text-input {
+  width: min(700px, 90%);
+  height: 58px;
+  margin: 28px auto 10px;
+
+  display: block;
+  box-sizing: border-box;
+
+  padding: 0 24px;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 18px;
+
+  outline: none;
+
+  background: rgba(10, 18, 45, 0.85);
+  color: white;
+
+  font-size: 17px;
+  font-weight: 500;
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.25),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+
+  backdrop-filter: blur(15px);
+
+  transition: all 0.25s ease;
+}
+
+.font-text-input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.font-text-input:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.font-text-input:focus {
+  border-color: rgba(120, 160, 255, 0.8);
+
+  box-shadow:
+    0 0 0 4px rgba(80, 120, 255, 0.12),
+    0 12px 40px rgba(0, 0, 0, 0.3);
+}
