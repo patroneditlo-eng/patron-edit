@@ -120,7 +120,6 @@ function Home() {
               <div className="resource-icon">🔊</div>
               <h3>SFX & Sesler</h3>
               <p>Whoosh, impact, bass, transition ve daha fazlası.</p>
-              <a href="/sfx">Kaynakları Gör →</a>
             </div>
 
             <div className="resource-card">
