@@ -6,24 +6,19 @@
 }
 
 .sfx-header {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.sfx-small-title {
-  color: #9b7cff;
-  font-size: 14px;
-  font-weight: bold;
-  letter-spacing: 4px;
+  text-align: left;
+  margin-bottom: 40px;
 }
 
 .sfx-header h1 {
-  font-size: 48px;
-  margin: 12px 0;
+  font-size: 42px;
+  margin: 10px 0;
+  font-weight: 800;
 }
 
 .sfx-header p {
   color: #aeb8ce;
+  font-size: 16px;
 }
 
 .sfx-grid {
@@ -35,43 +30,70 @@
 }
 
 .sfx-card {
-  padding: 25px;
+  padding: 28px;
+  min-height: 220px;
   border-radius: 18px;
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: linear-gradient(
+    135deg,
+    rgba(36, 104, 230, 0.55),
+    rgba(20, 55, 130, 0.45)
+  );
+  border: 1px solid rgba(100, 160, 255, 0.45);
+  box-sizing: border-box;
+  transition: 0.2s ease;
+}
+
+.sfx-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(120, 180, 255, 0.8);
 }
 
 .sfx-icon {
-  font-size: 30px;
-  margin-bottom: 15px;
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: rgba(70, 130, 255, 0.45);
+  font-size: 24px;
+  margin-bottom: 18px;
 }
 
-.sfx-info h2 {
-  margin: 0 0 5px;
+.sfx-card h2 {
+  margin: 0 0 8px;
+  font-size: 23px;
 }
 
-.sfx-info span {
-  color: #929db5;
+.sfx-card > p {
+  margin: 0 0 22px;
+  color: #d1d8e8;
 }
 
-.sfx-actions {
-  margin-top: 20px;
+.sfx-player {
   display: flex;
   align-items: center;
   gap: 12px;
   flex-wrap: wrap;
 }
 
-.sfx-actions audio {
-  max-width: 100%;
+.sfx-player audio {
+  width: 100%;
+  max-width: 420px;
 }
 
-.sfx-actions a {
-  padding: 10px 15px;
+.download-btn {
+  display: inline-block;
+  padding: 10px 16px;
   border-radius: 9px;
   background: #7657e8;
   color: white;
   text-decoration: none;
+  font-weight: 600;
+}
+
+.download-btn:hover {
+  background: #896df0;
 }
 
 @media (max-width: 700px) {

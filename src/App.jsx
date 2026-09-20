@@ -5,6 +5,8 @@ import Login from "./Login";
 import Kayit from "./Kayit";
 import CC from "./CC/CC";
 import Shake from "./Shake/Shake";
+import BackgroundRemover from "./BackgroundRemover";
+import { login, register, logout } from "./auth";
 
 import "./index.css";
 
@@ -116,25 +118,35 @@ function Home() {
 
           <div className="resource-grid">
 
-            <div className="resource-card">
-              <div className="resource-icon">🔊</div>
-              <h3>SFX & Sesler</h3>
-              <p>Whoosh, impact, bass, transition ve daha fazlası.</p>
-            </div>
+             <div
+  className="resource-card"
+  onClick={() => window.location.href = "/sfx"}
+  style={{ cursor: "pointer" }}
+>
+  <div className="resource-icon">🔊</div>
+  <h3>SFX & Sesler</h3>
+  <p>Whoosh, impact, bass, transition ve daha fazlası.</p>
+</div>
 
-            <div className="resource-card">
-              <div className="resource-icon">✦</div>
-              <h3>Overlay</h3>
-              <p>Smoke, fire, particles, light leak ve efektler.</p>
-              <a href="/overlay">Kaynakları Gör →</a>
-            </div>
+            <div
+  className="resource-card"
+  onClick={() => window.location.href = "/overlay"}
+  style={{ cursor: "pointer" }}
+>
+  <div className="resource-icon">✦</div>
+  <h3>Overlay</h3>
+  <p>Smoke, fire, particles, light leak ve efektler.</p>
+</div>
 
-            <div className="resource-card">
-              <div className="resource-icon">Aa</div>
-              <h3>Fontlar</h3>
-              <p>Editlerinde kullanabileceğin özel fontlar.</p>
-              <a href="/fonts">Kaynakları Gör →</a>
-            </div>
+            <div
+  className="resource-card"
+  onClick={() => window.location.href = "/fonts"}
+  style={{ cursor: "pointer" }}
+>
+  <div className="resource-icon">Aa</div>
+  <h3>Fontlar</h3>
+  <p>Editlerinde kullanabileceğin özel fontlar.</p>
+</div>
 
             <div
               className="resource-card"
@@ -144,22 +156,27 @@ function Home() {
               <div className="resource-icon">◆</div>
               <h3>Edit İçin Shake ler</h3>
               <p>After Effects, Premiere Pro ve diğer programlar.</p>
-              <a href="/shake">Shakeler Gör →</a>
             </div>
 
-            <div className="resource-card">
-              <div className="resource-icon">▣</div>
-              <h3>Edit İçin CC ler</h3>
-              <p>Editlerinde kullanabileceğiniz ccler burdadır.</p>
-              <a href="/cc">Kaynakları Gör →</a>
-            </div>
+<div
+  className="resource-card"
+  onClick={() => window.location.href = "/cc"}
+  style={{ cursor: "pointer" }}
+>
+  <div className="resource-icon">▣</div>
+  <h3>Edit İçin CC ler</h3>
+  <p>Editlerinde kullanabileceğiniz cc ler burada.</p>
+</div>
 
-            <div className="resource-card">
-              <div className="resource-icon">⚡</div>
-              <h3>Transition</h3>
-              <p>Editlerine uygun geçiş efektleri.</p>
-              <a href="#">Kaynakları Gör →</a>
-            </div>
+            <div
+  className="resource-card"
+  onClick={() => window.location.href = "/background-remover"}
+  style={{ cursor: "pointer" }}
+>
+  <div className="resource-icon">✂️</div>
+  <h3>Arka Plan Kaldırıcı</h3>
+  <p>Fotoğraflarındaki arka planı kolayca kaldır.</p>
+</div>
 
           </div>
         </section>
@@ -184,6 +201,10 @@ function App() {
   if (path === "/overlay") {
     return <Overlay />;
   }
+
+  if (path === "/background-remover") {
+  return <BackgroundRemover />;
+}
 
   if (path === "/fonts") {
     return <Fonts />;
