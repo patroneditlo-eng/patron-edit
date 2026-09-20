@@ -82,7 +82,6 @@ function Home() {
         <nav className="main-nav">
           <a href="/">Ana Sayfa</a>
           <a href="/shake">Shake</a>
-          <a href="/sfx">Kaynaklar</a>
           <a href="/fonts">Fontlar</a>
           <a href="/login">Giriş Yap</a>
           <a href="/kayit" className="register-btn">Kaydol</a>

@@ -65,19 +65,33 @@
   margin-bottom: 20px;
 }
 
-.cc-card button {
-  width: 100%;
-  padding: 12px;
-  border: none;
-  border-radius: 10px;
-  background: #635bff;
+/* İNDİR BUTONU */
+.cc-download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 14px 24px;
+  border-radius: 14px;
+
+  background: linear-gradient(135deg, #d66cff, #b84dff);
   color: white;
+
+  font-size: 17px;
   font-weight: 700;
+  text-decoration: none;
+
   cursor: pointer;
+  transition: 0.25s;
+
+  box-shadow: 0 8px 20px rgba(190, 75, 255, 0.25);
 }
 
-.cc-card button:hover {
-  background: #756eff;
+.cc-download:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #df7cff, #c45cff);
+  box-shadow: 0 10px 25px rgba(190, 75, 255, 0.4);
 }
 
 @media (max-width: 1000px) {
