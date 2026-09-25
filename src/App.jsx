@@ -26,7 +26,6 @@ function Programlar() {
       <p>Editlerinizde kullanabileceğiniz shake presetleri.</p>
 
       <div className="program-grid">
-
         <div className="program-card">
           <div className="program-icon">Ae</div>
           <h2>After Effects 2020</h2>
@@ -71,7 +70,6 @@ function Programlar() {
             İndir / Git ↗
           </a>
         </div>
-
       </div>
     </div>
   );
@@ -82,12 +80,28 @@ function Home() {
     <div className="site">
 
       {/* NAVBAR */}
-      <header className="navbar">
+      <header
+        className="navbar"
+        style={{
+          minHeight: "84px",
+          padding: "0 24px",
+          boxSizing: "border-box",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+        }}
+      >
 
         {/* LOGO */}
         <a href="/" className="logo">
-
-          <div className="logo-box">
+          <div
+            className="logo-box"
+            style={{
+              width: "48px",
+              height: "48px",
+              fontSize: "22px",
+            }}
+          >
             P
           </div>
 
@@ -95,19 +109,41 @@ function Home() {
             <strong>PATRONEDİTLO</strong>
             <span>COMMUNİTY</span>
           </div>
-
         </a>
 
-        {/* MENÜ */}
-        <nav className="main-nav">
+        {/* ANA MENÜ */}
+        <nav
+          className="main-nav"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "18px",
+          }}
+        >
 
           {/* ANA SAYFA */}
-          <a href="/">
+          <a
+            href="/"
+            style={{
+              fontSize: "16px",
+              fontWeight: "700",
+              padding: "12px 8px",
+              whiteSpace: "nowrap",
+            }}
+          >
             Ana Sayfa
           </a>
 
           {/* GİRİŞ YAP */}
-          <a href="/login">
+          <a
+            href="/login"
+            style={{
+              fontSize: "16px",
+              fontWeight: "700",
+              padding: "12px 8px",
+              whiteSpace: "nowrap",
+            }}
+          >
             Giriş Yap
           </a>
 
@@ -115,6 +151,12 @@ function Home() {
           <a
             href="/kayit"
             className="register-btn"
+            style={{
+              fontSize: "16px",
+              fontWeight: "700",
+              padding: "12px 8px",
+              whiteSpace: "nowrap",
+            }}
           >
             Kaydol
           </a>
@@ -125,8 +167,8 @@ function Home() {
             style={{
               display: "flex",
               alignItems: "center",
-              gap: "8px",
-              marginLeft: "10px",
+              gap: "10px",
+              marginLeft: "12px",
             }}
           >
 
@@ -138,21 +180,26 @@ function Home() {
               className="social-btn instagram"
               aria-label="Instagram"
               style={{
+                minWidth: "108px",
+                height: "48px",
+                padding: "0 16px",
+                boxSizing: "border-box",
                 display: "flex",
                 alignItems: "center",
-                gap: "7px",
-                padding: "9px 13px",
-                borderRadius: "10px",
+                justifyContent: "center",
+                gap: "8px",
+                borderRadius: "12px",
                 color: "#fff",
                 textDecoration: "none",
-                fontWeight: "600",
-                fontSize: "14px",
+                fontWeight: "700",
+                fontSize: "15px",
                 background:
                   "linear-gradient(135deg, #ff7a00 0%, #ff3d00 45%, #182848 100%)",
                 transition: "0.2s ease",
+                whiteSpace: "nowrap",
               }}
             >
-              <FaInstagram size={17} />
+              <FaInstagram size={19} />
               <span>Instagram</span>
             </a>
 
@@ -164,20 +211,25 @@ function Home() {
               className="social-btn youtube"
               aria-label="YouTube"
               style={{
+                minWidth: "102px",
+                height: "48px",
+                padding: "0 16px",
+                boxSizing: "border-box",
                 display: "flex",
                 alignItems: "center",
-                gap: "7px",
-                padding: "9px 13px",
-                borderRadius: "10px",
+                justifyContent: "center",
+                gap: "8px",
+                borderRadius: "12px",
                 color: "#fff",
                 textDecoration: "none",
-                fontWeight: "600",
-                fontSize: "14px",
+                fontWeight: "700",
+                fontSize: "15px",
                 background: "#ff0000",
                 transition: "0.2s ease",
+                whiteSpace: "nowrap",
               }}
             >
-              <FaYoutube size={17} />
+              <FaYoutube size={19} />
               <span>YouTube</span>
             </a>
 
@@ -189,20 +241,25 @@ function Home() {
               className="social-btn tiktok"
               aria-label="TikTok"
               style={{
+                minWidth: "92px",
+                height: "48px",
+                padding: "0 16px",
+                boxSizing: "border-box",
                 display: "flex",
                 alignItems: "center",
-                gap: "7px",
-                padding: "9px 13px",
-                borderRadius: "10px",
+                justifyContent: "center",
+                gap: "8px",
+                borderRadius: "12px",
                 color: "#fff",
                 textDecoration: "none",
-                fontWeight: "600",
-                fontSize: "14px",
+                fontWeight: "700",
+                fontSize: "15px",
                 background: "#050505",
                 transition: "0.2s ease",
+                whiteSpace: "nowrap",
               }}
             >
-              <FaTiktok size={17} />
+              <FaTiktok size={19} />
               <span>TikTok</span>
             </a>
 
@@ -214,36 +271,37 @@ function Home() {
               className="social-btn discord"
               aria-label="Discord"
               style={{
+                minWidth: "102px",
+                height: "48px",
+                padding: "0 16px",
+                boxSizing: "border-box",
                 display: "flex",
                 alignItems: "center",
-                gap: "7px",
-                padding: "9px 13px",
-                borderRadius: "10px",
+                justifyContent: "center",
+                gap: "8px",
+                borderRadius: "12px",
                 color: "#fff",
                 textDecoration: "none",
-                fontWeight: "600",
-                fontSize: "14px",
+                fontWeight: "700",
+                fontSize: "15px",
                 background: "#5865F2",
                 transition: "0.2s ease",
+                whiteSpace: "nowrap",
               }}
             >
-              <FaDiscord size={17} />
+              <FaDiscord size={19} />
               <span>Discord</span>
             </a>
 
           </div>
-
         </nav>
-
       </header>
-
 
       {/* ANA İÇERİK */}
       <main>
 
         {/* HERO */}
         <section className="hero">
-
           <p className="hero-small">
             ✦ PATRON EDIT KAYNAK PLATFORMU
           </p>
@@ -258,18 +316,13 @@ function Home() {
             Editlerin için gerekli SFX, overlay, font, preset,
             template ve daha fazlasını tek yerde bul.
           </p>
-
         </section>
-
 
         {/* KAYNAKLAR */}
         <section className="resources">
 
           <div className="section-title">
-
-            <p>
-              KAYNAKLAR
-            </p>
+            <p>KAYNAKLAR</p>
 
             <h2>
               Editini güçlendirecek kaynaklar
@@ -278,9 +331,7 @@ function Home() {
             <span>
               Aradığın her şeyi kategorilere ayırdık.
             </span>
-
           </div>
-
 
           <div className="resource-grid">
 
@@ -292,19 +343,14 @@ function Home() {
               }}
               style={{ cursor: "pointer" }}
             >
-              <div className="resource-icon">
-                🔊
-              </div>
+              <div className="resource-icon">🔊</div>
 
-              <h3>
-                SFX & Sesler
-              </h3>
+              <h3>SFX & Sesler</h3>
 
               <p>
                 Whoosh, impact, bass, transition ve daha fazlası.
               </p>
             </div>
-
 
             {/* OVERLAY */}
             <div
@@ -314,19 +360,14 @@ function Home() {
               }}
               style={{ cursor: "pointer" }}
             >
-              <div className="resource-icon">
-                ✦
-              </div>
+              <div className="resource-icon">✦</div>
 
-              <h3>
-                Overlay
-              </h3>
+              <h3>Overlay</h3>
 
               <p>
                 Smoke, fire, particles, light leak ve efektler.
               </p>
             </div>
-
 
             {/* FONTLAR */}
             <div
@@ -336,19 +377,14 @@ function Home() {
               }}
               style={{ cursor: "pointer" }}
             >
-              <div className="resource-icon">
-                Aa
-              </div>
+              <div className="resource-icon">Aa</div>
 
-              <h3>
-                Fontlar
-              </h3>
+              <h3>Fontlar</h3>
 
               <p>
                 Editlerinde kullanabileceğin özel fontlar.
               </p>
             </div>
-
 
             {/* SHAKE */}
             <div
@@ -358,19 +394,14 @@ function Home() {
               }}
               style={{ cursor: "pointer" }}
             >
-              <div className="resource-icon">
-                ◆
-              </div>
+              <div className="resource-icon">◆</div>
 
-              <h3>
-                Edit İçin Shake ler
-              </h3>
+              <h3>Edit İçin Shake ler</h3>
 
               <p>
                 After Effects, Premiere Pro ve diğer programlar.
               </p>
             </div>
-
 
             {/* CC */}
             <div
@@ -380,19 +411,14 @@ function Home() {
               }}
               style={{ cursor: "pointer" }}
             >
-              <div className="resource-icon">
-                ▣
-              </div>
+              <div className="resource-icon">▣</div>
 
-              <h3>
-                Edit İçin CC ler
-              </h3>
+              <h3>Edit İçin CC ler</h3>
 
               <p>
                 Editlerinde kullanabileceğiniz cc ler burada.
               </p>
             </div>
-
 
             {/* BACKGROUND REMOVER */}
             <div
@@ -402,13 +428,9 @@ function Home() {
               }}
               style={{ cursor: "pointer" }}
             >
-              <div className="resource-icon">
-                ✂️
-              </div>
+              <div className="resource-icon">✂️</div>
 
-              <h3>
-                Arka Plan Kaldırıcı
-              </h3>
+              <h3>Arka Plan Kaldırıcı</h3>
 
               <p>
                 Fotoğraflarındaki arka planı kolayca kaldır.
@@ -416,66 +438,45 @@ function Home() {
             </div>
 
           </div>
-
         </section>
 
       </main>
 
-
       {/* FOOTER */}
       <footer>
-        <p>
-          © 2026 Patron Edit
-        </p>
+        <p>© 2026 Patron Edit</p>
       </footer>
 
     </div>
   );
 }
 
-
 function App() {
-
   const path = window.location.pathname;
 
   const [session, setSession] = useState(null);
   const [loading, setLoading] = useState(true);
 
-
   useEffect(() => {
-
-    supabase.auth
-      .getSession()
-      .then(({ data }) => {
-
-        setSession(data.session);
-        setLoading(false);
-
-      });
-
+    supabase.auth.getSession().then(({ data }) => {
+      setSession(data.session);
+      setLoading(false);
+    });
 
     const {
       data: { subscription },
-    } = supabase.auth.onAuthStateChange(
-      (_event, session) => {
-
-        setSession(session);
-        setLoading(false);
-
-      }
-    );
-
+    } = supabase.auth.onAuthStateChange((_event, session) => {
+      setSession(session);
+      setLoading(false);
+    });
 
     return () => {
       subscription.unsubscribe();
     };
-
   }, []);
 
-
-  {/* YÜKLENİYOR */}
+  /* YÜKLENİYOR */
   if (loading) {
-
     return (
       <div
         style={{
@@ -490,77 +491,61 @@ function App() {
         Yükleniyor...
       </div>
     );
-
   }
 
-
-  {/* LOGIN */}
+  /* LOGIN */
   if (path === "/login") {
     return <Login />;
   }
 
-
-  {/* KAYIT */}
+  /* KAYIT */
   if (path === "/kayit") {
     return <Kayit />;
   }
 
-
-  {/* GİRİŞ YAPMAMIŞSA */}
+  /* GİRİŞ YAPMAMIŞSA LOGIN */
   if (!session) {
-
     window.location.replace("/login");
-
     return null;
-
   }
 
-
-  {/* SFX */}
+  /* SFX */
   if (path === "/sfx") {
     return <SFX />;
   }
 
-
-  {/* OVERLAY */}
+  /* OVERLAY */
   if (path === "/overlay") {
     return <Overlay />;
   }
 
-
-  {/* BACKGROUND REMOVER */}
+  /* BACKGROUND REMOVER */
   if (path === "/background-remover") {
     return <BackgroundRemover />;
   }
 
-
-  {/* FONTS */}
+  /* FONTS */
   if (path === "/fonts") {
     return <Fonts />;
   }
 
-
-  {/* PROGRAMLAR */}
+  /* PROGRAMLAR */
   if (path === "/programlar") {
     return <Programlar />;
   }
 
-
-  {/* SHAKE */}
+  /* SHAKE */
   if (path === "/shake") {
     return <Shake />;
   }
 
-
-  {/* CC */}
+  /* CC */
   if (path === "/cc") {
     return <CC />;
   }
 
-
-  {/* ANA SAYFA */}
+  /* ANA SAYFA */
   return <Home />;
 }
-
 
 export default App;
