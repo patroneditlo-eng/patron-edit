@@ -84,12 +84,62 @@ function Home() {
         </a>
 
         <nav className="main-nav">
-          <a href="/">Ana Sayfa</a>
-          <a href="/shake">Shake</a>
-          <a href="/fonts">Fontlar</a>
-          <a href="/login">Giriş Yap</a>
-          <a href="/kayit" className="register-btn">Kaydol</a>
-        </nav>
+  <a href="/">Ana Sayfa</a>
+  <a href="/shake">Shake</a>
+  <a href="/fonts">Fontlar</a>
+  <a href="/login">Giriş Yap</a>
+  <a href="/kayıt" className="register-btn">Kaydol</a>
+  <a
+  href="https://www.instagram.com/patroneditlo.aep/"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Instagram
+</a>
+
+<a
+  href="https://www.youtube.com/@PatronEditLo"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  YouTube
+</a>
+
+<a
+  href="https://www.tiktok.com/@patroneditlo"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  TikTok
+</a>
+
+  <a
+    href="https://www.instagram.com/patroneditlo.aep/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="social-link"
+  >
+    Instagram
+  </a>
+
+  <a
+    href="https://www.youtube.com/@PatronEditLo"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="social-link"
+  >
+    YouTube
+  </a>
+
+  <a
+    href="https://www.tiktok.com/@patroneditlo"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="social-link"
+  >
+    TikTok
+  </a>
+</nav>
 
       </header>
 
