@@ -303,7 +303,7 @@ function Home() {
         {/* HERO */}
         <section className="hero">
           <p className="hero-small">
-            ✦ PATRON EDIT KAYNAK PLATFORMU
+            ✦ PATRONEDITLO KAYNAK PLATFORMU
           </p>
 
           <h1>
